@@ -15,7 +15,6 @@ int countPairs2(int *arr, int len, int value) {
   int count = 0;
   for (int i = 0; i < len; ++i) {
     int target = value - arr[i];
-    // бинарный поиск левой границы
     int lb = i + 1, ub = len;
     while (lb < ub) {
       int mid = lb + (ub - lb) / 2;
@@ -26,7 +25,6 @@ int countPairs2(int *arr, int len, int value) {
       }
     }
     int low = lb;
-    // бинарный поиск правой границы
     lb = i + 1;
     ub = len;
     while (lb < ub) {
